@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanksgiving Turkey | CSS Live Demo</title>
+    <title>Thanksgiving Turkey Lugia Disguise</title>
 
     <style>
         html,
@@ -67,6 +67,8 @@
             transform: scaleX(-1) rotate(3deg);
         }
 
+        /*creates wing "fingers" with extra divs*/
+
         .wing-finger {
             position: absolute;
             width: 60%;
@@ -121,14 +123,61 @@
         }
 
         .eye {
-            width: 10%;
-            height: 10%;
+            width: 8%;
+            height: 8%;
             background: black;
             border-radius: 50%;
             top: 45%;
             left: 50%;
             transform: translate(-50%, 0) translate(-2.5vmin, 0);
+            z-index: 3;
             box-shadow: 5vmin 0
+        }
+
+        /*creates whites of eyes and eye things that are on Lugia's head*/
+
+        .eyewhite {
+            position: absolute;
+            width: 50%;
+            height: 30%;
+            background: var(--white1);
+            left: 5%;
+            top: 33%;
+            border-radius: 0 100% 0 0;
+            transform: scale(0.4);
+            z-index: 2;
+        }
+
+        .eyewhite::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--white1);
+            left: 200%;
+            transform: scaleX(-1);
+            border-radius: 0 100% 0 0;
+        }
+
+        .eyething {
+            position: absolute;
+            width: 50%;
+            height: 30%;
+            background: var(--blue1);
+            left: -5%;
+            top: 27%;
+            border-radius: 0 100% 0 0;
+        }
+
+        .eyething::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--blue1);
+            left: 120%;
+            transform: scaleX(-1);
+            border-radius: 0 100% 0 0;
         }
 
         .beak {
@@ -156,7 +205,7 @@
         .leg {
             width: 3%;
             height: 21%;
-            background: var(--orange1);
+            background: var(--white1);
             top: 79%;
             left: 50%;
             transform: translate(-50%, 0) translate(-4vmin, 0);
@@ -179,7 +228,7 @@
             height: 35%;
             left: 50%;
             bottom: 0;
-            background: var(--orange1);
+            background: var(--white1);
             border-radius: 5vmin;
             transform-origin: 50% 0;
             transform: translate(-50%, 0) rotate(30deg);
@@ -199,6 +248,9 @@
             left: 46%;
             transform: translate(-50%, 0);
         }
+        
+
+        /*decreased number of tails to match lugia's back spines. also changes shape slightly*/
 
 
         .tail {
@@ -272,6 +324,8 @@
         <div class="hat-bottom"></div>
         <div class="head">
             <div class="eye"></div>
+            <div class="eyewhite"></div>
+            <div class="eyething"></div>
             <div class="beak"></div>
             <div class="red"></div>
         </div>
